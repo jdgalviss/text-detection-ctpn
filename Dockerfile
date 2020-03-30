@@ -33,6 +33,9 @@ COPY data /usr/src/app/data
 COPY main /usr/src/app/main
 COPY nets /usr/src/app/nets
 COPY utils /usr/src/app/utils
+COPY checkpoints_mlt /usr/src/app/checkpoints_mlt
+COPY *.ipynb /usr/src/app/
+
 
 RUN sh -c 'cd /usr/src/app/utils/bbox; chmod +x make.sh; ./make.sh'
 WORKDIR /usr/src/app/
